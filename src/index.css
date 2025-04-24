@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&display=swap');
+
+@theme {
+  --color-primary: #1b4c2e;
+  --color-secondary: #fff5e1;
+  --color-dark: #141414;
+  --color-light: #faffe9;
+  --color-accent: #ed9e3f;
+  --font-poppins: Poppins, sans-serif;
+  --font-londrina: Londrina Outline, sans-serif;
+}
+
+a:active, a:hover {
+  text-decoration: none;
+  transition: all .2s ease;
+}
