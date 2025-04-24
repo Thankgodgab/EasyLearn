@@ -9,7 +9,7 @@ function App() {
       <div className="main-wrapper font-poppins bg-primary pt-[20px] text-white">
         <Header/>
         <Body/>
-        {/* <Footer/> */}
+        <Footer/>
       </div> 
     </div>
     </>
