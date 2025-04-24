@@ -8,7 +8,6 @@ import Student from '../assets/student.png'
 
 function Body() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isHovered, setIsHovered] = useState(false);
 
 
   const successRates = [
@@ -20,7 +19,7 @@ function Body() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => (prevIndex + 1) % successRates.length);
-    }, 3000); // Change every 3 seconds
+    }, 3000);
     return () => clearInterval(interval);
   }, [successRates.length]);
 
@@ -181,7 +180,7 @@ function Body() {
           <p className="text-xl text-primary font-light text-left w-[80%]">FAQs</p>
           <h2 className="text-3xl font-medium text-primary sm:w-[80%]">Common questions</h2>
           <div className="w-[95%] pr-5 md:pr-0 sm:w-[75%] grid lg:grid-cols-2 grid-col-1 mt-[50px] gap-12 text-left">
-            
+
             <div className="flex gap-x-7 items-center justify-between border-2 border-primary rounded-[30px] px-7 py-3">
               <h2 className="text-lg text-primary">
                 How do live tutoring sessions work?
@@ -253,60 +252,16 @@ function Body() {
                   How do live tutoring sessions work?
                 </h2>
               </div>
-              
-              <div className="h-full items-center justify-center flex">
-                  <div className="rounded-full w-[40px] h-[40px] bg-primary text-white items-center justify-center flex">
-                    <div className="w-[20px] h-[20px] text-white">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"/></svg>
-                    </div>
-                  </div>
-                  
-              </div>
-            </div>
-            {/* <div
-              className={`flex gap-x-7 items-start justify-between border-2 rounded-[30px] px-7 py-3 transition-all duration-300 ${isHovered ? 'bg-primary text-white h-auto' : 'border-primary h-[80px]'
-                }`}
-              onMouseEnter={() => setIsHovered(true)}
-              onMouseLeave={() => setIsHovered(false)}
-            >
-              <div className="flex flex-col text-left justify-start items-start">
-                <h2 className={`text-lg ${isHovered ? 'text-white' : 'text-primary'} self-start`}>
-                  How do live tutoring sessions work?
-                </h2>
-                {isHovered && (
-                  <p className="text-sm text-white mt-2 transition-opacity duration-300">
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem, sint. Aut, tempora. Quis reprehenderit eum nam illum est voluptates officia itaque minus molestias, sed soluta possimus hic quo. Fugiat, animi.
-                  </p>
-                )}
-              </div>
 
               <div className="h-full items-center justify-center flex">
-                <div
-                  className={`rounded-full w-[40px] h-[40px] flex items-center justify-center ${isHovered ? 'bg-white' : 'bg-primary'
-                    }`}
-                >
-                  <div className="w-[20px] h-[20px]">
-                    {isHovered ? (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <path
-                          fill="#1b4c2e"
-                          d="M416 208H32c-17.67 0-32 14.33-32 32s14.33 32 32 32h384c17.67 0 32-14.33 32-32s-14.33-32-32-32z"
-                        />
-                      </svg>
-                    ) : (
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
-                        <path
-                          fill="#ffffff"
-                          d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z"
-                        />
-                      </svg>
-                    )}
+                <div className="rounded-full w-[40px] h-[40px] bg-primary text-white items-center justify-center flex">
+                  <div className="w-[20px] h-[20px] text-white">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="#ffffff" d="M256 80c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 144L48 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l144 0 0 144c0 17.7 14.3 32 32 32s32-14.3 32-32l0-144 144 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-144 0 0-144z" /></svg>
                   </div>
                 </div>
+
               </div>
-            </div> */}
-
-
+            </div>
           </div>
         </div>
       </section>
@@ -316,26 +271,26 @@ function Body() {
           <p className="text-xl text-primary font-light text-center w-[90%] mb-12">Join thousand of student achieving their academic <br />goals with EasyLearn</p>
           <div className="w-[95%] pr-5 md:pr-0 sm:w-[75%] grid grid-cols-3 md:grid-cols-5 lg:grid-cols-6 gap-12 text-left">
             <div className="items-center h-[100px] bg-pink-100 rounded-full overflow-hidden">
-              <img src={Student} alt="studentProfile" className='object-cover h-full w-full'/>
+              <img src={Student} alt="studentProfile" className='object-cover h-full w-full' />
             </div>
             <div className="items-center h-[100px] bg-pink-100 rounded-full overflow-hidden">
-              <img src={Student} alt="studentProfile" className='object-cover h-full w-full'/>
+              <img src={Student} alt="studentProfile" className='object-cover h-full w-full' />
             </div>
             <div className="items-center h-[100px] bg-pink-100 rounded-full overflow-hidden">
-              <img src={Student} alt="studentProfile" className='object-cover h-full w-full'/>
+              <img src={Student} alt="studentProfile" className='object-cover h-full w-full' />
             </div>
             <div className="items-center h-[100px] bg-pink-100 rounded-full overflow-hidden">
-              <img src={Student} alt="studentProfile" className='object-cover h-full w-full'/>
+              <img src={Student} alt="studentProfile" className='object-cover h-full w-full' />
             </div>
             <div className="items-center h-[100px] bg-pink-100 rounded-full overflow-hidden">
-              <img src={Student} alt="studentProfile" className='object-cover h-full w-full'/>
+              <img src={Student} alt="studentProfile" className='object-cover h-full w-full' />
             </div>
             <div className="items-center h-[100px] bg-pink-100 rounded-full overflow-hidden">
-              <img src={Student} alt="studentProfile" className='object-cover h-full w-full'/>
+              <img src={Student} alt="studentProfile" className='object-cover h-full w-full' />
             </div>
           </div>
           <div className="mt-[50px]">
-              <a href="#" className='flex items-center justify-center w-[150px] h-[50px] bg-primary shadow-md shadow-dark p-3 text-lg font-medium rounded-[30px] text-light hover:bg-accent  hover:text-light '>Get Started</a>
+            <a href="#" className='flex items-center justify-center w-[150px] h-[50px] bg-primary shadow-md shadow-dark p-3 text-lg font-medium rounded-[30px] text-light hover:bg-accent  hover:text-light '>Get Started</a>
           </div>
         </div>
       </section>

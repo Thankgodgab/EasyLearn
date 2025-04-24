@@ -31,7 +31,7 @@ function Header() {
               href="#"
               className="flex items-center justify-center w-[150px] h-[50px] bg-primary shadow-md shadow-dark p-3 text-lg font-medium rounded-[30px] text-light hover:bg-accent hover:text-light"
             >
-              Get Started
+              Get Starte
             </a>
           </div>
         </div>
@@ -44,7 +44,6 @@ function Header() {
           </button>
         </div>
       </nav>
-      {/* Mobile Menu */}
       {isMenuOpen && (
         <div className="absolute top-[100px] left-0 w-full bg-white rounded-[20px] shadow-lg p-4 z-[998]">
           <ul className="list-none flex flex-col gap-4 text-xl text-primary font-medium">
